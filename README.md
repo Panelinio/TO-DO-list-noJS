@@ -30,6 +30,7 @@ What helped me:
 Here is my devlog :D
 
 21.06.2024 - start
+
 So my task is to do... a TO-DO list. But tricky part is that I need to build it without using JS. It sounds like a tough challenge :D
 
 We are going to use HTML forms to display and hide list elements.
