@@ -24,6 +24,9 @@ Test app in my [codepen](https://codepen.io/Panelinio/pen/GRaxQZP)
 What helped me:
 * [codersblock.com](https://codersblock.com/blog/checkbox-trickery-with-css/)
 * [moderncss.dev](https://moderncss.dev/pure-css-custom-checkbox-style/)
+* [Pasja Informatyki](https://forum.pasja-informatyki.pl/)
+* [aditus.io](https://www.aditus.io/aria/aria-label/)
+* [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark)
 * Chat-GPT - kinda...
 
 ## Devlog
@@ -35,11 +38,11 @@ So my task is to do... a TO-DO list. But tricky part is that I need to build it 
 
 We are going to use HTML forms to display and hide list elements.
 
-Well, I've created 2 files - index.html and style.css. I want my app to be darkish. I've found pretty-looking colors in [colorhunt.co](https://colorhunt.co/palettes).
+Well, I created 2 files - index.html and style.css. I want my app to be darkish. I found pretty-looking colors in [colorhunt.co](https://colorhunt.co/palettes).
 Now we need to make that project to be semantic, so instead of using <div> or <table> we are going to use <main>, <footer> etc.
 But how to center my elements? With simple CSS attributes :D
 
-Unfortunately I couldn't center list elements... I've has searched couple of forums but nothing helped me. So I asked Chat-GPT.
+Unfortunately I couldn't center list elements... I searched couple of forums but nothing helped me. So I asked Chat-GPT.
 Using AI isn't my keen, but it helps me discover new routes and understand what code represents.
 Chat-GPT gave me a sollution :D Now to the tricky part - inserting user's tasks in list elements.
 
@@ -75,3 +78,13 @@ input:checked + label .new-task
 
 Now after clicking on checkbox we can delete our task :D
 So we can already add some animations and make that page responsive. Done :D
+
+
+24.06.2024
+
+I published my work to Polish forum - Pasja Informatyki and I've got some amazing answers :D
+I added placeholders for inputs and aria-labels for all components. And I've added light mode. But it's only working when light mode is switched on in OS.
+I need to find a way how to toggle light-dark() function.
+
+Well, probably there's no other way to toggle that. But i'll find the solution.
+On the other hand I added few animations and improved aria-labels.

@@ -7,46 +7,47 @@
     <link rel="stylesheet" href=style.css>
 </head>
 <body>
-    <header aria-label="TO-DO list without JS">TO-DO list without JS</header>
-    <nav aria-label="Only HTML and CSS ;)">Only HTML and CSS ;)</nav>
+    <header>TO-DO list without JS</header>
+    <nav>Only HTML and CSS ;)</nav>
     <main>
         <p aria-label="Tasks">Tasks</p>
         <article class="task">
-                <input type="checkbox" class="task-box" id="task-1" aria-label="Checkbox for "/>
+            <span id="check-desc" hidden>Mark as done</span>
+            <input type="checkbox" class="task-box" id="task-1" aria-describedby="check-desc"/>
                 <label for="task-1">
                     <input type="text" class="new-task" placeholder="" name="Task 1" aria-label="First task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-2"/>
+            <input type="checkbox" class="task-box" id="task-2" aria-describedby="check-desc"/>
                 <label for="task-2">
                     <input type="text" class="new-task" placeholder="" name="Task 2" aria-label="Second task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-3"/>
+            <input type="checkbox" class="task-box" id="task-3" aria-describedby="check-desc"/>
                 <label for="task-3">
                     <input type="text" class="new-task" placeholder="" name="Task 3" aria-label="Third task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-4"/>
+            <input type="checkbox" class="task-box" id="task-4" aria-describedby="check-desc"/>
                 <label for="task-4">
                     <input type="text" class="new-task" placeholder="" name="Task 4" aria-label="Fourth task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-5"/>
+            <input type="checkbox" class="task-box" id="task-5" aria-describedby="check-desc"/>
                 <label for="task-5">
                     <input type="text" class="new-task" placeholder="" name="Task 5" aria-label="Fifth task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-6"/>
+            <input type="checkbox" class="task-box" id="task-6" aria-describedby="check-desc"/>
                 <label for="task-6">
                     <input type="text" class="new-task" placeholder="" name="Task 6" aria-label="Sixth task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-7"/>
+            <input type="checkbox" class="task-box" id="task-7" aria-describedby="check-desc"/>
                 <label for="task-7">
                     <input type="text" class="new-task" placeholder="" name="Task 7" aria-label="Seventh task"/>
                 </label>
-                <input type="checkbox" class="task-box" id="task-8"/>
+            <input type="checkbox" class="task-box" id="task-8" aria-describedby="check-desc"/>
                 <label for="task-8">
                     <input type="text" class="new-task" placeholder="" name="Task 8" aria-label="Eighth task"/>
                 </label>
         </article>
     </main>
-    <footer aria-label="Author: Kacper Twardowski. Made in 2024">
+    <footer>
         -Kacper Twardowski | 2024-
     </footer>
 </body>

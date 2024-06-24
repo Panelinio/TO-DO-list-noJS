@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
-:root {
+:root 
+{
     color-scheme: light dark;
-  }
+}
 
 body
 {
@@ -27,22 +28,36 @@ header
     margin: 30px;
     font-size: 50px;
     font-weight: 700;
+    animation: 1.5s fadeInUp;
 }
 
 nav
 {
     padding: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2s forwards;
 }
 
 main
 {
     width: 70%;
-    height: 550px;
     background-color: light-dark(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4));;
     border-radius: 30px;
-    padding: 5px;
+    padding: 0px 5px 50px 5px;
     margin: 0 auto;
+    margin-top: 20px;
     box-shadow: 0px 14px 33px 9px rgba(66, 68, 90, 1);
+    animation: fadeShadow 4s ease-in-out;
+}
+
+.fadein
+{
+    animation: fadeInUp 2s forwards;
+}
+
+.shadow
+{
+    animation: shadow 2s infinite;
 }
 
 main p
@@ -72,6 +87,8 @@ footer
     margin-top: auto;
     padding: 10px;
     letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 3s forwards;
 }
 
 .task-box
@@ -96,8 +113,8 @@ footer
     height: 0.85em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em  light-dark(#191825, #F6F1E9);
-    background-color: light-dark(#191825, #F6F1E9);
+    box-shadow: inset 1em 1em  currentColor;
+    background-color: currentColor;
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
@@ -116,12 +133,12 @@ footer
 .new-task
 {
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid light-dark(#191825, #F6F1E9);;
+    border: 2px solid currentColor;
     border-radius: 5px;
     height: 30px;
     width: 80%;
     padding-left: 5px;
-    color: light-dark(#191825, #F6F1E9);;
+    color: currentColor;
     font-family: "PT Mono", monospace;
     font-size: 20px;
     text-decoration: line-through;
@@ -150,7 +167,8 @@ input:checked + label .new-task:not(:placeholder-shown)
     margin-left: 10px;
 }
 
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 80rem) 
+{
     main {
       width: 50%;
     }
@@ -159,4 +177,43 @@ input:checked + label .new-task:not(:placeholder-shown)
     {
         width: 100%;
     }
+}
+
+@keyframes fadeInUp 
+{
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
+
+@keyframes fadeIn 
+{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeShadow
+{
+    0%{
+        opacity: 0;
+        box-shadow: 0px 14px 33px 9px rgba(66, 68, 90, 1);
+        
+    }
+    50%{
+        opacity: 1;
+        box-shadow: 0px 14px 33px 20px rgb(99, 101, 131);
+    }
+    100%{
+        opacity: 1;
+        box-shadow: 0px 14px 33px 9px rgba(66, 68, 90, 1);
+    } 
+}
