@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body
 {
     background-color: #191825;
@@ -34,8 +38,6 @@ main
     border-radius: 30px;
     padding: 5px;
     margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 0px 14px 33px 9px rgba(66, 68, 90, 1);
 }
 
@@ -72,7 +74,6 @@ footer
 {
     -webkit-appearance: none;
     appearance: none;
-    background-color: var(--form-control-color);
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -80,7 +81,6 @@ footer
     height: 1.85em;
     border: 0.15em solid currentColor;
     border-radius: 0.15em;
-    transform: translateY(-0.075em);
     display: grid;
     place-content: center;
 }
@@ -125,7 +125,7 @@ footer
     transition: all 0.2s ease-out 0.5ms
 }
 
-input:checked + label .new-task
+input:checked + label .new-task:not(:placeholder-shown)
 {
     text-decoration-color: #06D001;
     border: 2px solid #06D001;
