@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    color-scheme: light dark;
+  }
+
 body
 {
-    background-color: #191825;
-    color: #F6F1E9;
+    background-color: light-dark(#F6F1E9, #191825);
+    color: light-dark(#191825, #F6F1E9);
     font-family: "PT Mono", monospace;
     text-align: center;
     justify-content: center;
@@ -34,7 +38,7 @@ main
 {
     width: 70%;
     height: 550px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: light-dark(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4));;
     border-radius: 30px;
     padding: 5px;
     margin: 0 auto;
@@ -92,8 +96,8 @@ footer
     height: 0.85em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em  #F6F1E9;
-    background-color: #F6F1E9;
+    box-shadow: inset 1em 1em  light-dark(#191825, #F6F1E9);
+    background-color: light-dark(#191825, #F6F1E9);
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
@@ -112,12 +116,12 @@ footer
 .new-task
 {
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #F6F1E9;
+    border: 2px solid light-dark(#191825, #F6F1E9);;
     border-radius: 5px;
     height: 30px;
     width: 80%;
     padding-left: 5px;
-    color: #F6F1E9;
+    color: light-dark(#191825, #F6F1E9);;
     font-family: "PT Mono", monospace;
     font-size: 20px;
     text-decoration: line-through;
