@@ -82,9 +82,15 @@ So we can already add some animations and make that page responsive. Done :D
 
 24.06.2024
 
-I published my work to Polish forum - Pasja Informatyki and I've got some amazing answers :D
+I published my work on Polish forum - Pasja Informatyki and I've got some amazing answers :D
 I added placeholders for inputs and aria-labels for all components. And I've added light mode. But it's only working when light mode is switched on in OS.
 I need to find a way how to toggle light-dark() function.
 
 Well, probably there's no other way to toggle that. But i'll find the solution.
 On the other hand I added few animations and improved aria-labels.
+
+
+27.06.2024
+
+Well, when creating a new project (Simple Blog), I decided to add some animations :D
+I added hover animation for labels and pointer for checkboxes.
