@@ -21,6 +21,7 @@ body
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    container: main / inline-size;
 }
 
 header
@@ -40,7 +41,7 @@ nav
 
 main
 {
-    width: 70%;
+    width: 50%;
     background-color: light-dark(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4));;
     border-radius: 30px;
     padding: 0px 5px 50px 5px;
@@ -177,15 +178,41 @@ input:checked + label .new-task:not(:placeholder-shown):hover
     margin-left: 10px;
 }
 
-@media screen and (min-width: 80rem) 
+@container main (max-width: 768px)
 {
     main {
-      width: 50%;
+      width: 60%;
     }
 
     .new-task
     {
-        width: 100%;
+        width: 70%;
+    }
+
+    header
+    {
+        font-size: 28px;
+    }
+
+    .task
+    {
+        gap: 0.8em;
+        padding: 10px;
+    }
+    
+    .task-box
+    {
+        margin-left: 20px;
+    }
+
+    nav, footer
+    {
+        font-size: 12px;
+    }
+
+    main p
+    {
+        font-size: 25px;
     }
 }
 
