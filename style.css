@@ -27,13 +27,15 @@ body
 header
 {
     margin: 30px;
-    font-size: 50px;
+    font-size: clamp(2rem, 3vw, 5.5rem);
     font-weight: 700;
     animation: 1.5s fadeInUp;
+    text-wrap: balance;
 }
 
 nav
 {
+    font-size: clamp(0.8rem, 1.3vw, 3rem);
     padding: 10px;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 2s forwards;
@@ -90,6 +92,7 @@ footer
     letter-spacing: 2px;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 3s forwards;
+    font-size: clamp(0.8rem, 1.3vw, 3rem);
 }
 
 .task-box
@@ -181,17 +184,13 @@ input:checked + label .new-task:not(:placeholder-shown):hover
 @container main (max-width: 768px)
 {
     main {
-      width: 60%;
+      width: 80%;
+      margin-top: 30px;
     }
 
     .new-task
     {
         width: 70%;
-    }
-
-    header
-    {
-        font-size: 28px;
     }
 
     .task
@@ -203,11 +202,6 @@ input:checked + label .new-task:not(:placeholder-shown):hover
     .task-box
     {
         margin-left: 20px;
-    }
-
-    nav, footer
-    {
-        font-size: 12px;
     }
 
     main p
