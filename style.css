@@ -146,13 +146,13 @@ footer
     color: currentColor;
     font-family: "PT Mono", monospace;
     font-size: 20px;
-    text-decoration: line-through;
     text-decoration-color: transparent;
     transition: all 0.2s ease-out 0.5ms
 }
 
-input:checked + label .new-task:not(:placeholder-shown)
+input:checked + label .new-task:valid:not(:placeholder-shown)
 {
+    text-decoration: line-through;
     text-decoration-color: #06D001;
     border: 2px solid #06D001;
 }
@@ -171,7 +171,7 @@ input:checked + label .new-task:not(:placeholder-shown)
     box-shadow: 0px 0px 15px 2px rgb(99, 101, 131);
 }
 
-input:checked + label .new-task:not(:placeholder-shown):hover
+input:checked + label .new-task:valid:not(:placeholder-shown):hover
 {
     box-shadow: 0px 0px 15px 2px rgb(65, 180, 84);
 }
